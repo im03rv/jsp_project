@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.profile.student.model.Student;
@@ -13,11 +14,11 @@ import com.profile.student.service.StudentService;
 @RequestMapping("/profile")
 public class StudentController {
 	
-//	@ResponseBody
-//	@GetMapping("/check")
-//	public String check() {
-//		return "Welcome!!!";
-//	}
+	@ResponseBody
+	@GetMapping("/check")
+	public String check() {
+		return "Welcome!!!";
+	}
 	@Autowired
 	private StudentService studentService;
 
